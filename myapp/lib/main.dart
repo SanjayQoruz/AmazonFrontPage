@@ -107,7 +107,10 @@ class MyHomePage extends StatelessWidget {
                     return const Column(children: [
                       Image(
                         image: NetworkImage(
-                            "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcScjyBW4blZXxaHkvzR7wWxf1BgvALdY1ZXhKHAay6ypNUJLKL5dGgBjI2TNiiX9Xm30xdVZEr4hwuYfUNuzB9T7zNV6aVgYLn2PjVyhtT7Z2LjG6F3EYlBPQ&usqp=CAE"),
+                            "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcScjyBW4blZXxaHkvzR7wWxf1BgvALdY1ZXhKHAay6ypNUJLKL5dGgBjI2TNiiX9Xm30xdVZEr4hwuYfUNuzB9T7zNV6aVgYLn2PjVyhtT7Z2LjG6F3EYlBPQ&usqp=CAE",
+                            
+                            ),
+                            height: 50,
                       ),
                       Text("Mobile")
                     ]);
@@ -117,7 +120,7 @@ class MyHomePage extends StatelessWidget {
               color: Colors.grey,
             ),
             Flexible(
-                flex: 2,
+                flex: 3,
                 child: Stack(
                   children: [
                     const Image(
@@ -234,12 +237,14 @@ class MyHomePage extends StatelessWidget {
                     )
                   ],
                 )),
-            SingleChildScrollView(
-                padding: EdgeInsets.all(10),
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Container(
+                Flexible(
+                  flex:2,
+                  child:
+                    ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 10,
+                      itemBuilder:(BuildContext context,int index){
+                           return Container(
                         margin: const EdgeInsets.all(10),
                         height: 200,
                         width: 150,
@@ -262,129 +267,10 @@ class MyHomePage extends StatelessWidget {
                               fontSize: 20,
                               color: Colors.white,
                               fontWeight: FontWeight.bold),
-                        )),
-                    Container(
-                        height: 200,
-                        width: 150,
-                        margin: const EdgeInsets.all(10),
-                        decoration: const BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage("assets/images/image1.jpg"),
-                              fit: BoxFit.fitHeight,
-                              opacity: 0.7,
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.black,
-                                  offset: Offset(0.5, 0.5),
-                                  blurRadius: 2)
-                            ]),
-                        child: const Text(
-                          "Keep Shoping For T-shirts",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        )),
-                    Container(
-                        height: 200,
-                        width: 150,
-                        margin: const EdgeInsets.all(10),
-                        decoration: const BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage("assets/images/image1.jpg"),
-                              fit: BoxFit.fitHeight,
-                              opacity: 0.7,
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.black,
-                                  offset: Offset(0.5, 0.5),
-                                  blurRadius: 2)
-                            ]),
-                        child: const Text(
-                          "Keep Shoping For T-shirts",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        )),
-                    Container(
-                        height: 200,
-                        width: 150,
-                        margin: const EdgeInsets.all(10),
-                        decoration: const BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage("assets/images/image1.jpg"),
-                              fit: BoxFit.fitHeight,
-                              opacity: 0.7,
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.black,
-                                  offset: Offset(0.5, 0.5),
-                                  blurRadius: 2)
-                            ]),
-                        child: const Text(
-                          "Keep Shoping For T-shirts",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        )),
-                    Container(
-                        height: 200,
-                        width: 150,
-                        margin: const EdgeInsets.all(10),
-                        decoration: const BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage("assets/images/image1.jpg"),
-                              fit: BoxFit.fitHeight,
-                              opacity: 0.7,
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.black,
-                                  offset: Offset(0.5, 0.5),
-                                  blurRadius: 2)
-                            ]),
-                        child: const Text(
-                          "Keep Shoping For T-shirts",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        )),
-                    Container(
-                        height: 200,
-                        width: 150,
-                        margin: const EdgeInsets.all(10),
-                        decoration: const BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage("assets/images/image1.jpg"),
-                              fit: BoxFit.fitHeight,
-                              opacity: 0.7,
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.black,
-                                  offset: Offset(0.5, 0.5),
-                                  blurRadius: 2)
-                            ]),
-                        child: const Text(
-                          "Keep Shoping For T-shirts",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        ))
-                  ],
-                ))
+                        ));
+                    })
+                )
+           
           ],
         ),
       ),
