@@ -13,9 +13,20 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: MyHomePage(),
+      home:MyHomePage(),
     );
   }
+}
+
+class MyHomePage extends StatelessWidget{
+  const MyHomePage({super.key});
+
+     @override
+     Widget build (BuildContext context){
+         return const SafeArea(child:Scaffold(
+            body:City(),
+         ));
+     }
 }
 
 class MyHomePage extends StatelessWidget {
@@ -100,6 +111,7 @@ class MyHomePage extends StatelessWidget {
             ),
             Flexible(
               child: ListView.builder(
+                  shrinkWrap:true,
                    padding: const EdgeInsets.all(10),
                    scrollDirection: Axis.horizontal,
                   itemCount: 10,
@@ -277,3 +289,4 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
+
